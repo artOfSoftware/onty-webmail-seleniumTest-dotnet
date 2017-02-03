@@ -30,6 +30,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		}
 
 		[Test]
+		[Description("This test is not fully implemented")]
 		public void Test_Mailbox_SendMessage()
 		{
 			User user = TestData.UsersValid[0];

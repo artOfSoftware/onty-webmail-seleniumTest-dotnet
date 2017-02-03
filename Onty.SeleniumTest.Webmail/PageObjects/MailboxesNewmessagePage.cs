@@ -38,6 +38,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		public MailboxesPage SendMessage( User toUser, string subject, string message )
 		{
 			// select to user
+			// TODO: the test code below is not working properly...
 			IWebElement toDropdown = driver.FindElement( By.Id( "message_to_id" ) );
 			SelectElement select = new SelectElement(toDropdown);
 			select.SelectByValue( toUser.id.ToString() );
