@@ -59,15 +59,15 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		[CacheLookup]
 		protected IWebElement LinkMailboxFolders { get; set; }
 
-		[FindsBy( How = How.CssSelector, Using = "a#nav-Mailboxes-view-folder-1" )]
+		[FindsBy( How = How.CssSelector, Using = "a#nav-mailboxes-view-folder-1" )]
 		[CacheLookup]
 		protected IWebElement LinkMailboxFoldersInbox { get; set; }
 
-		[FindsBy( How = How.CssSelector, Using = "a#nav-Mailboxes-view-folder-2" )]
+		[FindsBy( How = How.CssSelector, Using = "a#nav-mailboxes-view-folder-2" )]
 		[CacheLookup]
 		protected IWebElement LinkMailboxFoldersSent { get; set; }
 
-		[FindsBy( How = How.CssSelector, Using = "a#nav-Mailboxes-view-folder-3" )]
+		[FindsBy( How = How.CssSelector, Using = "a#nav-mailboxes-view-folder-3" )]
 		[CacheLookup]
 		protected IWebElement LinkMailboxFoldersArchived { get; set; }
 
@@ -189,6 +189,11 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			// TODO: need a try-catch block here?
 
 			return true;
+		}
+
+		protected void Sleep( double sleepS )
+		{
+			Thread.Sleep( TimeSpan.FromSeconds( sleepS ) );
 		}
 
 

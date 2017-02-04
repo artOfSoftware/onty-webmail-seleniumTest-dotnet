@@ -12,6 +12,11 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 	public class MailboxesFoldersPage : CommonPageElements
 	{
 
+		[FindsBy( How = How.Id, Using = "create-folder" )]
+		[CacheLookup]
+		protected IWebElement LinkCreateFolder { get; set; }
+
+
 		public MailboxesFoldersPage( IWebDriver driver ) : base( driver )
 		{
 			if ( !CheckIfUrlMatches( "mailboxes/folders", 10 ) )
@@ -25,20 +30,15 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		}
 
 
-		//public bool CheckLoggedinMessage()
-		//{
-		//	return FirstParagraph.Text == "You are currently logged in.";
-		//}
+		public MailboxesNewfolderPage ClickLinkNewfolder()
+		{
+			LinkCreateFolder.Click();
 
-		//public bool CheckNoticeValidLogin()
-		//{
-		//	return ( MessageNotice.Displayed && MessageNotice.Text == "Notice: Login Successful" );
-		//}
+			WaitForPageToLoad();
 
-		//public bool CheckYourInfo( User user )
-		//{
-		//	return ( driver.PageSource.Contains( "User name: " + user.name ) );
-		//}
+			return new MailboxesNewfolderPage( driver );
+		}
+
 	}
 
 }//ns

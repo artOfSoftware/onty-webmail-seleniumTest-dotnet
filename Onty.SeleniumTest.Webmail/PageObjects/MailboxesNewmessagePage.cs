@@ -21,7 +21,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			PageFactory.InitElements( driver, this );
 
 			if ( FirstH1Text.Text != "New Message" )
-				throw new WrongPageException( "expecting Mailboxes/Index page (h1 text is wrong)" );
+				throw new WrongPageException( "expecting Mailboxes/Newmessage page (h1 text is wrong)" );
 
 		}
 
@@ -35,24 +35,24 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			return ( fromText == expectedFromText );
 		}
 
-		public MailboxesPage SendMessage( User toUser, string subject, string message )
+		public MailboxesPage SendMessage( User toUser, Message message )
 		{
 			// select to user
-			// TODO: the test code below is not working properly...
 			IWebElement toDropdown = driver.FindElement( By.Id( "message_to_id" ) );
-			SelectElement select = new SelectElement(toDropdown);
-			select.SelectByValue( toUser.id.ToString() );
 
-			//IWebElement toOption = toDropdown.FindElement( By.XPath( "//option[@value='" + toUser.id + "']" ) );
-			//toOption.Click();
+			//SelectElement select = new SelectElement(toDropdown);
+			//select.SelectByValue( toUser.id.ToString() );
+			//select.SelectByText( toUser.DisplayName );
+			//select.SelectByIndex( 2 );
+			toDropdown.SendKeys( toUser.DisplayName + Keys.Enter );
 
 			// type subject
 			IWebElement subjectTextbox = driver.FindElement( By.Id("message_subject"));
-			subjectTextbox.SendKeys( subject );
+			subjectTextbox.SendKeys( message.subject );
 
 			// type message
 			IWebElement messageTextbox = driver.FindElement( By.Id("message_text"));
-			messageTextbox.SendKeys( message );
+			messageTextbox.SendKeys( message.text );
 
 			// click create message
 			IWebElement createButton = driver.FindElement( By.CssSelector("input#send"));
@@ -63,10 +63,6 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			return new MailboxesPage( driver );
 		}
 
-		//public bool CheckYourInfo( User user )
-		//{
-		//	return ( driver.PageSource.Contains( "User name: " + user.name ) );
-		//}
 	}
 
 }//ns

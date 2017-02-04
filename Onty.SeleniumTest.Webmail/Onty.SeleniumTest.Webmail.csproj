@@ -54,6 +54,7 @@
     <Compile Include="Exceptions\WrongPageException.cs" />
     <Compile Include="PageObjects\MailboxesFolderPage.cs" />
     <Compile Include="PageObjects\MailboxesFoldersPage.cs" />
+    <Compile Include="PageObjects\MailboxesNewfolderPage.cs" />
     <Compile Include="PageObjects\MailboxesNewmessagePage.cs" />
     <Compile Include="PageObjects\MailboxesPage.cs" />
     <Compile Include="PageObjects\AccountsPasswordPage.cs" />
@@ -74,7 +75,9 @@
     <Compile Include="Tests\ATest.cs" />
     <Compile Include="Tests\Tests_NotLoggedIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Rnd.cs" />
     <Compile Include="Util\ScreenShotUtil.cs" />
+    <Compile Include="Util\StringUtil.cs" />
     <Compile Include="Util\TestData.cs" />
     <Compile Include="Util\WebDriverFactory.cs" />
   </ItemGroup>
@@ -86,7 +89,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Docs\more test cases.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>

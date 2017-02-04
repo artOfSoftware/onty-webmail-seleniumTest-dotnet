@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Onty.SeleniumTest.Webmail.Domain
 {
@@ -19,5 +18,14 @@ namespace Onty.SeleniumTest.Webmail.Domain
 		{
 			this.customFolders = new List<Folder>();
 		}
+
+		public string DisplayName
+		{
+			get
+			{
+				return fullName + " (" + name + ")";
+			}
+		}
+
 	}
 }

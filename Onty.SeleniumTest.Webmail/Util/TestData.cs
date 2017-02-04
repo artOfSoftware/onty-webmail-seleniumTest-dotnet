@@ -26,16 +26,16 @@ namespace Onty.SeleniumTest.Webmail.Util
 			// valid users
 			UsersValid.Add( new User()
 			{
-				id =23,
-				name ="testuser",
-				password ="testuser",
+				id       = 2,
+				name     = "testuser",
+				password = "testuser",
 				fullName = "Test User",
 			} );
 
 			UsersValid.Add( new User()
 			{
-				id = 22,
-				name = "onty",
+				id       = 1,
+				name     = "onty",
 				password = "onty",
 				fullName = "onty toom",
 			} );
@@ -43,9 +43,9 @@ namespace Onty.SeleniumTest.Webmail.Util
 			// invalid users
 			UsersInvalid.Add( new User()
 			{
-				id =-1,
-				name ="invaliduser",
-				password ="unknown",
+				id       = -1,
+				name     = "invaliduser",
+				password = "unknown",
 				fullName = "Nonexistent User for negative testing",
 			} );
 
