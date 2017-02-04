@@ -53,17 +53,14 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 
 		internal bool CheckIfMessageIsListed( Message message )
 		{
-			var rows = driver.FindElements( By.CssSelector( "table tr" ) );
+			int nrMessages = driver.FindElements( By.CssSelector( "table tr" ) ).Count;
 
 			bool found = false;
-			foreach ( IWebElement row in rows )
+			for ( int i=1 ; i<=nrMessages ; i++ )
 			{
-				string from    = row.FindElement(By.XPath("//td/a" )).Text;
-				string to      = row.FindElement(By.XPath("//td[2]/a" )).Text;
-				string subject = row.FindElement(By.XPath("//td[3]" )).Text;
-				//string text    = row.FindElement(By.XPath("td[4]" )).Text;
-
-				// TODO: this currently does not work. i thought chaining locators would cause a subcontext, but it does not seem to work this way...
+				string from    = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td > a" )).Text;
+				string to      = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td:nth-of-type(2) > a" )).Text;
+				string subject = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td:nth-of-type(3)" )).Text;
 
 				if ( from == message.from.DisplayName &&
 					 to == message.to.DisplayName &&
