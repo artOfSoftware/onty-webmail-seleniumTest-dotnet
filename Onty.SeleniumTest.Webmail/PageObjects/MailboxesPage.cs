@@ -30,6 +30,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			int nrFolders = user.customFolders.Count + 3;
 			string expectedText = "You have "+ nrFolders +" folders.";
 
+			//TODO: this is poorly implemented. test currently fails, but should pass. needs review.
 			if ( FirstParagraph.Text != expectedText )
 				throw new ValidationException( "number of folders stated ("+FirstParagraph.Text+") differs from expected ("+expectedText+")" );
 
@@ -51,7 +52,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 
 			if ( items.Count > 3 )
 			{
-				//TODO: they could be in a different order
+				//TODO: they could be in a different order irl
 				for ( int i = 3 ; i < items.Count ; i++ )
 				{
 					if ( items[i].Text != user.customFolders[i - 3].name )

@@ -16,6 +16,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 	{
 
 		[Test]
+		[Order( 1 )]
 		public void Test_Account_Users()
 		{
 			User user = TestData.UsersValid[0];
@@ -33,6 +34,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		}
 
 		[Test]
+		[Order( 1 )]
 		public void Test_Account_Password()
 		{
 			User user = TestData.UsersValid[0];
@@ -48,6 +50,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		}
 
 		[Test]
+		[Order( 1 )]
 		public void Test_Account_Logout()
 		{
 			User user = TestData.UsersValid[0];
@@ -65,6 +68,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 		//TODO: this is not really an account test. where should it be?
 		[Test]
+		[Order( 1 )]
 		public void Test_Unk_Menu()
 		{
 			User user = TestData.UsersValid[0];

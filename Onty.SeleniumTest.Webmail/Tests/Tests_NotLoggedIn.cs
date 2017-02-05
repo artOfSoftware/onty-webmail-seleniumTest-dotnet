@@ -17,6 +17,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 	{
 
 		[Test]
+		[Order( 0 )]
 		public void Test_NotLoggedIn_Home()
 		{
 			var loginPage = AccountsLoginPage.Go(driver);

@@ -18,6 +18,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 	{
 
 		[Test]
+		[Order( 0 )]
 		public void Test_Login_Invalid()
 		{
 			User invalidUser = TestData.UsersInvalid[0];
@@ -31,6 +32,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		}
 
 		[Test]
+		[Order( 0 )]
 		public void Test_Login_Valid()
 		{
 			User validUser = TestData.UsersValid[0];

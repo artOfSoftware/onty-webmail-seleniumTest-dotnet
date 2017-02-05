@@ -16,6 +16,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 	{
 
 		[Test]
+		[Order(2)]
 		public void Test_Mailbox_Home()
 		{
 			User user = TestData.UsersValid[0];
@@ -30,6 +31,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		}
 
 		[Test]
+		[Order( 2 )]
 		[Category("This test is not fully implemented")]
 		public void Test_Mailbox_SendMessage()
 		{
@@ -59,10 +61,19 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 			Assert.IsTrue( sentFolderPage.CheckIfMessageIsListed( message ), "sent message not listed in sent folder" );
 
+			loginPage = sentFolderPage.ClickMenuLogout();
 			// TODO: login as the recipient, and check inbox
+
+			// login as recipient, and check inbox
+			homePage = loginPage.LoginAsValid( user2 );
+			Assert.IsTrue( homePage.CheckLoggedinMessage(), "valid login" );
+
+			var inboxPage = homePage.ClickMenuFolder( Folder.Builtin.Inbox );
+			Assert.IsTrue( inboxPage.CheckIfMessageIsListed( message ), "sent message is not listed in recipient's folder" );
 		}
 
 		[Test]
+		[Order( 2 )]
 		public void Test_Mailbox_CreateFolder()
 		{
 			User user = TestData.UsersValid[0];

@@ -74,10 +74,6 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			return found;
 		}
 
-		//public bool CheckYourInfo( User user )
-		//{
-		//	return ( driver.PageSource.Contains( "User name: " + user.name ) );
-		//}
 	}
 
 }//ns
