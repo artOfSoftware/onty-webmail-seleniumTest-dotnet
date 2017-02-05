@@ -61,8 +61,13 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 			Assert.IsTrue( sentFolderPage.CheckIfMessageIsListed( message ), "sent message not listed in sent folder" );
 
+			// view the actual message
+			var messagePage = sentFolderPage.ClickMessageRead( message );
+			message.id = messagePage.GetMessageId();
+			Assert.IsTrue( messagePage.CheckMessageDetails( message ), "message details are wrong for sender" );
+
+
 			loginPage = sentFolderPage.ClickMenuLogout();
-			// TODO: login as the recipient, and check inbox
 
 			// login as recipient, and check inbox
 			homePage = loginPage.LoginAsValid( user2 );
@@ -70,6 +75,10 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 			var inboxPage = homePage.ClickMenuFolder( Folder.Builtin.Inbox );
 			Assert.IsTrue( inboxPage.CheckIfMessageIsListed( message ), "sent message is not listed in recipient's folder" );
+
+			messagePage = inboxPage.ClickMessageRead( message );
+			message.id = messagePage.GetMessageId();
+			Assert.IsTrue( messagePage.CheckMessageDetails( message ), "message details are wrong for recipient" );
 		}
 
 		[Test]

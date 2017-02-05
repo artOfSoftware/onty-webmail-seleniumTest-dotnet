@@ -51,28 +51,48 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			return ( MessageNotice.Displayed && MessageNotice.Text == "Notice: Folder was created successfully" );
 		}
 
-		internal bool CheckIfMessageIsListed( Message message )
+		public bool CheckIfMessageIsListed( Message message )
 		{
-			int nrMessages = driver.FindElements( By.CssSelector( "table tr" ) ).Count;
+			return GetRowIdOfMessage(message).HasValue;
+		}
 
-			bool found = false;
-			for ( int i=1 ; i<=nrMessages ; i++ )
+		public MailboxesMessagePage ClickMessageRead( Message message )
+		{
+			int? rowId = GetRowIdOfMessage( message );
+			if ( !rowId.HasValue )
+				throw new ArgumentException( "Cannot click message's Read button because message is not listed in folder" );
+
+			IWebElement linkRead = driver.FindElement(By.CssSelector("table tr:nth-of-type("+rowId.Value+") > td:nth-of-type(5) > a" ));
+			linkRead.Click();
+
+			WaitForPageToLoad();
+
+			return new MailboxesMessagePage( driver );
+		}
+
+		protected int? GetRowIdOfMessage( Message message )
+		{
+			int nrMessages = driver.FindElements( By.CssSelector( "table tr" ) ).Count - 1;
+
+			int? rowId = null;
+			for ( int i = 1 ; i <= nrMessages ; i++ )
 			{
 				string from    = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td > a" )).Text;
 				string to      = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td:nth-of-type(2) > a" )).Text;
 				string subject = driver.FindElement(By.CssSelector("table tr:nth-of-type("+i+") > td:nth-of-type(3)" )).Text;
 
-				if ( from == message.from.DisplayName &&
-					 to == message.to.DisplayName &&
+				if ( from    == message.from.DisplayName &&
+					 to      == message.to.DisplayName &&
 					 subject == message.subject )
 				{
-					found = true;
+					rowId = i;
 					break;
 				}
 			}
 
-			return found;
+			return rowId;
 		}
+
 
 	}
 

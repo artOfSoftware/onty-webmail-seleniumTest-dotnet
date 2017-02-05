@@ -40,6 +40,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			// select to user
 			IWebElement toDropdown = driver.FindElement( By.Id( "message_to_id" ) );
 
+			// SelectElement functionality is broken in Selenium :-(
 			//SelectElement select = new SelectElement(toDropdown);
 			//select.SelectByValue( toUser.id.ToString() );
 			//select.SelectByText( toUser.DisplayName );

@@ -177,9 +177,9 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		// helper functions
 
 
-		protected bool WaitForPageToLoad( double timeoutS = 1.0 )
+		protected bool WaitForPageToLoad( double timeoutS = 2.0 )
 		{
-			Thread.Sleep( (int)( timeoutS * 1000 ) );
+			Thread.Sleep( TimeSpan.FromSeconds( timeoutS ) );
 
 			//WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutS));
 			//wait.Until( ( wdriver ) =>
