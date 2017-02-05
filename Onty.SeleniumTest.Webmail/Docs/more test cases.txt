@@ -1,5 +1,1 @@
-﻿creating user with same email as existing should fail
-
-send email, then check it went into sent.
-then login as the other user, and check inbox.
-
+﻿
