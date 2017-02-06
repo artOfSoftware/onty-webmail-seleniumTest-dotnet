@@ -63,20 +63,6 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 			return new AccountsHomePage( driver );
 		}
 
-		//public AccountsLoginPage LoginAsInvalid( User invalidUser )
-		//{
-		//	if ( !IsDisplayed( By.Id( "user_name" ), 10 ) )
-		//		throw new ElementNotVisibleException( "cannot find login field" );
-
-		//	UsernameField.SendKeys( invalidUser.name );
-		//	PasswordField.SendKeys( invalidUser.password );
-		//	LoginButton.Click();
-
-		//	WaitForPageToLoad();
-
-		//	return new AccountsLoginPage( driver );
-		//}
-
 
 		//public bool CheckErrorInvalidLogin()
 		//{
