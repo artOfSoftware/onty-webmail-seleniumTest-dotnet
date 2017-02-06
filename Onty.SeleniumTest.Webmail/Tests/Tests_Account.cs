@@ -45,8 +45,6 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 			// actual test
 			var accountPasswordPage = homePage.ClickMenuPassword();
-
-			
 		}
 
 		[Test]

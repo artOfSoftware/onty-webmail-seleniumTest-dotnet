@@ -1,4 +1,5 @@
 # Onty.SeleniumTest.Webmail
+
 Automated Selenium test suite for the [Simple Webmail System](https://github.com/ontytoom/onty-webmail-ruby)
 
 These tests were written in C# using Selenuium 3 API. They currently use the Firefox WebDriver, but this is configurable.
@@ -23,6 +24,7 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
    components and place them in appropriate locations to enable the test to run.
 
 ### Actually running
+
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
 NOTE: _Occasionally, a message that a FireFox plugin has crashed may be displayed.
@@ -42,11 +44,13 @@ If anyone knows how to fix it, please tell me. Thanks._
    1. View user list, and view info for currently logged in user
    1. Password page
    1. Logout
-   1. Check presense of all expected menu items in left-hand-side menu (this test really belongs to another category, but not sure where yet)
+   1. Check presense of all expected menu items in left-hand-side menu 
+      (this test really belongs to another category, but not sure where yet)
 1. Mailbox
    1. Mailbox page
    1. Create custom folder
-   1. Send a message and verify it was sent; also logs in as recipient and verified message was received
+   1. Send a message and verify it was sent; also logs in as recipient and 
+      verifies that message was received
    
    
 ## To do
@@ -60,4 +64,19 @@ The following tests still need to be written:
 1. Create a new account, and try to login
    1. Try to create a new account with duplicate username (negative test)
    1. Try to create a new account with duplicate email, same as an already existing account (negative test)
+
+General to-do items:
+
+1. Get suite to run on other browsers
+   1. Chrome
+   1. MSIE
+1. Currently every time a new page is retrieved, 
+   the function CommonPageElements.WaitForPageToLoad() is called.
+   The latter is currently implemented as a simple Thread.Sleep()
+   which works, but is a bad idea in the long-term. 
+   There need to be a better way to determine if a page has loaded.
+   For example, there could be some hidden element at the end of the page
+   presense of which can be used to determine if page has fully loaded.
+   If you are reading this, and know a good way to do so, please contact me
+   and educate me.
 

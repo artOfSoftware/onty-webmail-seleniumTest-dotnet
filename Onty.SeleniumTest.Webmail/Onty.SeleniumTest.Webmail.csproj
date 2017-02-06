@@ -52,6 +52,7 @@
     <Compile Include="Domain\User.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />
     <Compile Include="Exceptions\WrongPageException.cs" />
+    <Compile Include="PageObjects\AccountsSignupPage.cs" />
     <Compile Include="PageObjects\MailboxesMessagePage.cs" />
     <Compile Include="PageObjects\MailboxesFolderPage.cs" />
     <Compile Include="PageObjects\MailboxesFoldersPage.cs" />

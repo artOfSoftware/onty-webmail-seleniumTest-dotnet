@@ -39,6 +39,13 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		{
 			return ( driver.PageSource.Contains( "User name: " + user.name ) );
 		}
+
+		public bool CheckNoticeAccountcreated( User newUser )
+		{
+			return ( MessageNotice.Displayed && 
+				MessageNotice.Text == "Notice: Account " + newUser.name + " created!" );
+		}
+
 	}
 
 }//ns

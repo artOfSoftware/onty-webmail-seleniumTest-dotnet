@@ -74,6 +74,16 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		}
 
 
+		public AccountsSignupPage ClickSignup()
+		{
+			LinkSignup.Click();
+
+			WaitForPageToLoad();
+
+			return new AccountsSignupPage( driver );
+		}
+
+
 		public bool CheckTextNotloggedin()
 		{
 			return FirstParagraph.Text == "User is not logged in.";

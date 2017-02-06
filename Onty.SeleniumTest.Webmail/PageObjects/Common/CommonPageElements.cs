@@ -12,7 +12,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 {
 	public class CommonPageElements : APage
 	{
-		[FindsBy( How = How.TagName, Using = "h1" )]
+		[FindsBy( How = How.TagName, Using = "div.app-main > h1" )]
 		[CacheLookup]
 		protected IWebElement FirstH1Text { get; set; }
 
@@ -29,7 +29,18 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		protected IWebElement MessageNotice { get; set; }
 
 
-		// Menu Items
+		// Menu Items for a not-logged-in user
+
+		[FindsBy( How = How.CssSelector, Using = "a#nav-Login" )]
+		[CacheLookup]
+		protected IWebElement LinkLogin { get; set; }
+
+		[FindsBy( How = How.CssSelector, Using = "a#nav-Signup" )]
+		[CacheLookup]
+		protected IWebElement LinkSignup { get; set; }
+
+
+		// Menu Items for a logged-in user
 
 		[FindsBy( How = How.CssSelector, Using = "a#nav-Accounts" )]
 		[CacheLookup]

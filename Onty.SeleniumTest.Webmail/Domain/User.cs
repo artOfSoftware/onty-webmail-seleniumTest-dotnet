@@ -11,6 +11,8 @@ namespace Onty.SeleniumTest.Webmail.Domain
 		public string name;
 		public string password;
 		public string fullName;
+		public string email;
+
 
 		public List<Folder> customFolders;
 
