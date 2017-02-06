@@ -3,6 +3,7 @@ Automated Selenium test suite for the [Simple Webmail System](https://github.com
 
 These tests were written in C# using Selenuium 3 API. They currently use the Firefox WebDriver, but this is configurable.
 
+
 ## Running the suite
 
 ### Pre-requisites
@@ -24,9 +25,11 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 ### Actually running
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
-NOTE: _Occasionally, a message that a FireFox plus has crashed may be displayed.
-This does not seem to affect the test results. I don't know how to make the message
-not appear.  If anyone knows, please let me know. Thanks._
+NOTE: _Occasionally, a message that a FireFox plugin has crashed may be displayed.
+This does not seem to affect the test results. Just click "close" after the test
+finisies running. I don't know how to make the message not appear.
+If anyone knows how to fix it, please tell me. Thanks._
+
 
 ## Implemented tests
 
