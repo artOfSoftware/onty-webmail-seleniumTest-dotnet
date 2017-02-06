@@ -64,20 +64,38 @@ namespace Onty.SeleniumTest.Webmail.Tests
 			Assert.IsTrue( loginPage.CheckNoticeMessageLoggedOut(),	"logged-out Notice flash not displayed in Accounts" );
 		}
 
-		//TODO: this is not really an account test. where should it be?
+
 		[Test]
 		[Order( 1 )]
-		public void Test_Unk_Menu()
+		public void Test_Account_CreateAccount()
 		{
-			User user = TestData.UsersValid[0];
-
-			// login
 			var loginPage = AccountsLoginPage.Go(driver);
-			var homePage = loginPage.LoginAsValid( user );
+			var signupPage = loginPage.ClickSignup();
 
-			// check the menu
-			Assert.IsTrue( loginPage.CheckMenu(user), "validation of menu failed" );
+			string rndstr = StringUtil.MakeRandomString();
+
+			User newUser = new User()
+			{
+				name     = "newuser_" + rndstr,
+				fullName = "New User " + rndstr,
+				email    = rndstr + "@here.com",
+				password = rndstr,
+			};
+
+			var homePage = signupPage.SignupValid( newUser );
+			Assert.IsTrue( homePage.CheckNoticeAccountcreated( newUser ), "account created notice not displayed" );
+			Assert.IsTrue( homePage.CheckLoggedinMessage(),               "regular logged-in message not displayed" );
+			Assert.IsTrue( homePage.CheckYourInfo( newUser ),             "Your Info validation failed" );
+
+			// now try to logout and log back in as the new user
+			loginPage = homePage.ClickMenuLogout();
+			loginPage.LoginAsValid( newUser );
+
+			Assert.IsTrue( homePage.CheckLoggedinMessage(),   "logged-in Notice Flash not displayed in Accounts Home" );
+			Assert.IsTrue( homePage.CheckNoticeValidLogin(),  "logged-in message not displayed in Accounts Home" );
+			Assert.IsTrue( homePage.CheckYourInfo( newUser ), "correct user name not displayed under Your Info in Accounts Home" );
 		}
+
 
 	}
 

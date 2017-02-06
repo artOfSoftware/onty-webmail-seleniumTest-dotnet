@@ -71,6 +71,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Tests\Tests_General.cs" />
     <Compile Include="Tests\Tests_Mailbox.cs" />
     <Compile Include="Tests\Tests_Account.cs" />
     <Compile Include="Tests\Tests_Login.cs" />

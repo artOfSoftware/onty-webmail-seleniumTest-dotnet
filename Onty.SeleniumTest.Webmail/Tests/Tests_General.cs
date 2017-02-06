@@ -3,8 +3,6 @@ using System.Threading;
 
 using NUnit.Framework;
 
-using OpenQA.Selenium;
-
 using Onty.SeleniumTest.Webmail.PageObjects;
 using Onty.SeleniumTest.Webmail.Util;
 using Onty.SeleniumTest.Webmail.Domain;
@@ -14,19 +12,23 @@ namespace Onty.SeleniumTest.Webmail.Tests
 {
 
 	[TestFixture]
-	public class Tests_NotLoggedIn : ATest
+	public class Tests_General : ATest
 	{
 
 		[Test]
-		[Order( 0 )]
-		public void Test_NotLoggedIn_Home()
+		public void Test_General_Menu()
 		{
+			User user = TestData.UsersValid[0];
+
+			// login
 			var loginPage = AccountsLoginPage.Go(driver);
-			Assert.IsTrue( loginPage.CheckTextNotloggedin(), "not-logged-in message is not displayed" );
+			var homePage = loginPage.LoginAsValid( user );
+
+			// check the menu
+			Assert.IsTrue( loginPage.CheckMenu(user), "validation of menu failed" );
 		}
 
 
 	}
 
 }//ns
-
