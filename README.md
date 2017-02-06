@@ -24,11 +24,12 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 ## To do
 
 The following tests still need to be written:
+
 1. Changing the Password
-   1. Actually change the password, logout, and try to login using new password
-   1. Try changing to blank password (negative test)
-   1. Try entering mismatching passwords when changing password (negative test)
+  1. Actually change the password, logout, and try to login using new password
+  1. Try changing to blank password (negative test)
+  1. Try entering mismatching passwords when changing password (negative test)
 1. Create a new account, and try to login
-   1. Try to create a new account with duplicate username (negative test)
-   1. Try to create a new account with duplicate email, same as an already existing account (negative test)
+  1. Try to create a new account with duplicate username (negative test)
+  1. Try to create a new account with duplicate email, same as an already existing account (negative test)
 
