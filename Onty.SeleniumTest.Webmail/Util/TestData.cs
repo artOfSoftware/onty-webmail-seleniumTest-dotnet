@@ -29,15 +29,15 @@ namespace Onty.SeleniumTest.Webmail.Util
 				id       = 2,
 				name     = "testuser",
 				password = "testuser",
-				fullName = "Test User",
+				fullName = "test user",
 			} );
 
 			UsersValid.Add( new User()
 			{
-				id       = 1,
-				name     = "onty",
-				password = "onty",
-				fullName = "onty toom",
+				id       = 3,
+				name     = "testuser2",
+				password = "testuser2",
+				fullName = "test user 2",
 			} );
 
 			// invalid users

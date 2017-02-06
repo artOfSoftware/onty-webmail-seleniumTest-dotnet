@@ -29,7 +29,7 @@ namespace Onty.SeleniumTest.Webmail.Util
 			}
 			else if ( driverType == WebDriverType.Chrome )
 			{
-				ChromeDriverService svc = ChromeDriverService.CreateDefaultService( @"C:\dvt\Selenium\WebDrivers" );
+				ChromeDriverService svc = ChromeDriverService.CreateDefaultService(  ); //@"C:\dvt\Selenium\WebDrivers"
 
 				ChromeOptions opt = new ChromeOptions();
 				//{
@@ -39,11 +39,12 @@ namespace Onty.SeleniumTest.Webmail.Util
 			}
 			else if ( driverType == WebDriverType.Firefox )
 			{
-				FirefoxDriverService svc = FirefoxDriverService.CreateDefaultService( @"C:\dvt\Selenium\WebDrivers" );
+				FirefoxDriverService svc = FirefoxDriverService.CreateDefaultService(  );   //@"C:\dvt\Selenium\WebDrivers"
 
 				FirefoxOptions opt = new FirefoxOptions()
 				{
-					BrowserExecutableLocation = @"C:\Program Files\Mozilla Firefox\firefox.exe"
+					BrowserExecutableLocation = Properties.Settings.Default.PathFirefox,
+					//@"C:\Program Files\Mozilla Firefox\firefox.exe"
 				};
 				d = new FirefoxDriver( svc, opt, TimeSpan.FromSeconds( 10 ) );
 			}

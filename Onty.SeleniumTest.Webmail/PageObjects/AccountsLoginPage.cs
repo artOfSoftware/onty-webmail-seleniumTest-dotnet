@@ -37,7 +37,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 		}
 
 		public static AccountsLoginPage Go( IWebDriver driver )
-		{
+		 {
 			driver.Url = Properties.Settings.Default.BaseUrl + "/accounts/login" ;
 
 			return new AccountsLoginPage( driver );

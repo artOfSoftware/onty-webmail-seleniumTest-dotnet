@@ -46,7 +46,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 			// actual test
 			var accountPasswordPage = homePage.ClickMenuPassword();
 
-			// TODO: try changing the password (once valid, multiple invalid)
+			
 		}
 
 		[Test]

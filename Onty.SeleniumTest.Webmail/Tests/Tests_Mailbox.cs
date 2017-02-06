@@ -35,7 +35,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		[Category("This test is not fully implemented")]
 		public void Test_Mailbox_SendMessage()
 		{
-			User user = TestData.UsersValid[0];
+			User user  = TestData.UsersValid[0];
 			User user2 = TestData.UsersValid[1];
 
 			Message message = new Message()

@@ -25,10 +25,19 @@ namespace Onty.SeleniumTest.Webmail.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.1.102:3000/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://onty-webmail-ruby.herokuapp.com")]
         public string BaseUrl {
             get {
                 return ((string)(this["BaseUrl"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\Mozilla Firefox\\firefox.exe")]
+        public string PathFirefox {
+            get {
+                return ((string)(this["PathFirefox"]));
             }
         }
     }
