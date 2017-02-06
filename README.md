@@ -9,8 +9,8 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 
 1. MS Windows machine (7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)
 1. Visual Studio 2015 or higher (Community version is sufficient)
-1. FireFox installed ([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
-   is preferred because higher version of FireFox causes a crash at the end of each test)
+1. Mozilla FireFox ([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
+   is preferred because higher versions of FireFox cause a crash at the end of each test)
 
 ### Setup
 
@@ -24,6 +24,9 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 ### Actually running
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
+NOTE: _Occasionally, a message that a FireFox plus has crashed may be displayed.
+This does not seem to affect the test results. I don't know how to make the message
+not appear.  If anyone knows, please let me know. Thanks._
 
 ## Implemented tests
 
