@@ -57,7 +57,7 @@ If anyone knows how to fix it, please tell me. Thanks._
    
 ## To do
 
-The following tests still need to be written:
+### The following tests still need to be written
 
 1. Changing the Password
    1. Actually change the password, logout, and try to login using new password
@@ -67,7 +67,7 @@ The following tests still need to be written:
    1. Try to create a new account with duplicate username (negative test)
    1. Try to create a new account with duplicate email, same as an already existing account (negative test)
 
-General to-do items:
+### General to-do items
 
 1. Get suite to run on other browsers
    1. Chrome
