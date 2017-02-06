@@ -45,13 +45,14 @@ If anyone knows how to fix it, please tell me. Thanks._
    1. Password page
    1. Logout
    1. Create a new account
-   1. Check presense of all expected menu items in left-hand-side menu 
-      (this test really belongs to another category, but not sure where yet)
 1. Mailbox
    1. Mailbox page
    1. Create custom folder
    1. Send a message and verify it was sent; also logs in as recipient and 
       verifies that message was received
+1. General tests
+   1. Check presense of all expected menu items in left-hand-side menu 
+      (this test really belongs to another category, but not sure where yet)
    
    
 ## To do
