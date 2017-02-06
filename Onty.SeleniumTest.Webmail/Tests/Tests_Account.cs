@@ -89,7 +89,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 
 			// now try to logout and log back in as the new user
 			loginPage = homePage.ClickMenuLogout();
-			loginPage.LoginAsValid( newUser );
+			homePage = loginPage.LoginAsValid( newUser );
 
 			Assert.IsTrue( homePage.CheckLoggedinMessage(),   "logged-in Notice Flash not displayed in Accounts Home" );
 			Assert.IsTrue( homePage.CheckNoticeValidLogin(),  "logged-in message not displayed in Accounts Home" );
