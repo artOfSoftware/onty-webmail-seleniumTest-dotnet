@@ -48,7 +48,7 @@ They currently support Firefox and MSIE.
 
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
-NOTES:
+#### Notes:
  
 1. _Occasionally, a message that a FireFox plugin has crashed may be displayed.
    This does not seem to affect the test results. Just click "close" after the test
