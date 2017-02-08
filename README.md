@@ -30,7 +30,7 @@ They currently support Firefox and MSIE.
 ### Setup
 
 1. Download the entire suite, and open in Visual Studio
-1. In ``Solution Explorer`` tool window, right-click the project 
+1. In ``Solution Explorer`` tool window, right-click the solution
    ("Onty.SeleniumTest.Webmail" root entry) and click ``Restore NuGet Packages``. 
    This will download all required components and place them in 
    appropriate locations to enable the test to run.
@@ -48,12 +48,13 @@ They currently support Firefox and MSIE.
 
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
-NOTES: 
+NOTES:
+ 
 1. _Occasionally, a message that a FireFox plugin has crashed may be displayed.
    This does not seem to affect the test results. Just click "close" after the test
    finisies running. I don't know how to make the message not appear.
    If anyone knows how to fix it, please tell me. Thanks._
-2. _The WebDriver executables sometimes stay running in memory after the test completes.
+1. _The WebDriver executables sometimes stay running in memory after the test completes.
    This is a deficiency of WebDriver. The test calls driver.Quit() whether test passes
    or fails, but every now and again you may find leftover processes._
 
