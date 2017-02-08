@@ -64,7 +64,7 @@ namespace Onty.SeleniumTest.Webmail.Util
 					RequireWindowFocus = false
 				};
 
-				InternetExplorerDriverService svc = InternetExplorerDriverService.CreateDefaultService( @"C:\dvt\Selenium\WebDrivers" );
+				InternetExplorerDriverService svc = InternetExplorerDriverService.CreateDefaultService(  );     //@"C:\dvt\Selenium\WebDrivers"
 
 				d = new InternetExplorerDriver( svc, opt, TimeSpan.FromSeconds( 10 ) );
 			}

@@ -96,8 +96,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\packages\Chromium.ChromeDriver.2.27\content\chromedriver.exe">
+      <Link>chromedriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\packages\WebDriver.GeckoDriver.0.13.0\content\geckodriver.exe">
       <Link>geckodriver.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\WebDriverIEDriver64.2.45.0.0\tools\IEDriverServer-license.txt">
+      <Link>IEDriverServer-license.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\WebDriverIEDriver64.2.45.0.0\tools\IEDriverServer.exe">
+      <Link>IEDriverServer.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Docs\notes.txt" />

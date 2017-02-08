@@ -20,7 +20,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 		[SetUp]
 		public void Setup()
 		{
-			this.driver = WebDriverFactory.GetWebDriver( WebDriverType.Firefox );
+			this.driver = WebDriverFactory.GetWebDriver( WebDriverType.IE );
 		}
 
 		[TearDown]

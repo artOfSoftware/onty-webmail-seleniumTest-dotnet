@@ -12,7 +12,7 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 {
 	public class CommonPageElements : APage
 	{
-		[FindsBy( How = How.TagName, Using = "div.app-main > h1" )]
+		[FindsBy( How = How.CssSelector, Using = "div.app-main > h1" )]
 		[CacheLookup]
 		protected IWebElement FirstH1Text { get; set; }
 

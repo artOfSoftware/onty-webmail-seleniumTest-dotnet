@@ -11,17 +11,26 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 
 1. MS Windows machine (7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)
 1. Visual Studio 2015 or higher (Community version is sufficient)
-1. Mozilla FireFox ([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
-   is preferred because higher versions of FireFox cause a crash at the end of each test)
+1. A web browser.  Suite currently supports:
+   1. Mozilla FireFox ([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
+      is strongly suggested because higher versions of FireFox cause a crash 
+      at the end of each test)
+   1. Microsoft Internet Explorer (I use version 11 on 64-bit Windows 7 machine; if you use anything
+      else your mileage may vary. Also please make sure you follow the required setup instructions 
+      in Setup section below.)
 
 ### Setup
 
 1. Download the entire suite, and open in Visual Studio
-1. Edit the ``app.config`` file and change the ``PathFirefox`` entry to the actual
-   path where FireFox is on your machine.
 1. In ``Solution Explorer`` tool window, right-click the project ("Onty.SeleniumTest.Webmail" 
    root entry) and click ``Restore NuGet Packages``. This will download all required
    components and place them in appropriate locations to enable the test to run.
+1. Browser configuration:
+   1. FireFox: Edit the ``app.config`` file and change the ``PathFirefox`` 
+      entry to the actual path where FireFox is on your machine.
+   1. MSIE: Please please please make sure you follow
+      [the setup instructions](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration)
+
 
 ### Actually running
 
@@ -53,7 +62,7 @@ If anyone knows how to fix it, please tell me. Thanks._
 1. General tests
    1. Check presense of all expected menu items in left-hand-side menu 
       (this test really belongs to another category, but not sure where yet)
-   
+
    
 ## To do
 
@@ -71,7 +80,7 @@ If anyone knows how to fix it, please tell me. Thanks._
 
 1. Get suite to run on other browsers
    1. Chrome
-   1. MSIE
+   2. Safari
 1. Currently every time a new page is retrieved, 
    the function CommonPageElements.WaitForPageToLoad() is called.
    The latter is currently implemented as a simple Thread.Sleep()
