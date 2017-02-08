@@ -36,10 +36,14 @@ These tests were written in C# using Selenuium 3 API. They currently use the Fir
 
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
-NOTE: _Occasionally, a message that a FireFox plugin has crashed may be displayed.
-This does not seem to affect the test results. Just click "close" after the test
-finisies running. I don't know how to make the message not appear.
-If anyone knows how to fix it, please tell me. Thanks._
+NOTES: 
+1. _Occasionally, a message that a FireFox plugin has crashed may be displayed.
+   This does not seem to affect the test results. Just click "close" after the test
+   finisies running. I don't know how to make the message not appear.
+   If anyone knows how to fix it, please tell me. Thanks._
+2. _The WebDriver executables sometimes stay running in memory after the test completes.
+   This is a deficiency of WebDriver. The test calls driver.Quit() whether test passes
+   or fails, but every now and again you may find leftover processes._
 
 
 ## Implemented tests
