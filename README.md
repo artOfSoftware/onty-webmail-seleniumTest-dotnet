@@ -24,6 +24,8 @@ They currently support Firefox and MSIE.
       in Setup section below.)_
       _([Read here](http://jimevansmusic.blogspot.com/2014/09/screenshots-sendkeys-and-sixty-four.html)
       for a detailed discussion on why you should use 32-bit IE WebDriver instead of 64-bit.)_
+   1. Google Chrome
+   1. PhantomJS - a "headless" browser
 
 ### Setup
 
@@ -34,7 +36,8 @@ They currently support Firefox and MSIE.
    appropriate locations to enable the test to run.
 1. Browser configuration:
    1. All browsers: edit the ``app.config`` file, and change ``WebDriverType`` to:
-      ``firefox`` to run tests using Firefox, or ``ie`` for Internet Explorer.
+      ``firefox`` to run tests using Firefox, or ``ie`` for Internet Explorer, 
+      or ``chrome`` for Chrome, or ``phantomjs`` for PhantomJS
    1. FireFox: Edit the ``app.config`` file and change the ``PathFirefox`` 
       entry to the actual path where FireFox is on your machine.
    1. MSIE: Please please please make sure you follow
@@ -92,8 +95,7 @@ NOTES:
 ### General to-do items
 
 1. Get suite to run on other browsers
-   1. Chrome
-   2. Safari
+   1. Safari
 1. Currently every time a new page is retrieved, 
    the function CommonPageElements.WaitForPageToLoad() is called.
    The latter is currently implemented as a simple Thread.Sleep()

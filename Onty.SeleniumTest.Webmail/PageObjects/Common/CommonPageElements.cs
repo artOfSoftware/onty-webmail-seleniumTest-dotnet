@@ -168,7 +168,8 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 
 
 		// validation functions
-		public bool CheckMenu( User user )
+
+		public bool CheckMenuLoggedin( User user )
 		{
 			IWebElement menu = driver.FindElement( By.ClassName( "app-navigation-global" ) );
 
@@ -190,14 +191,16 @@ namespace Onty.SeleniumTest.Webmail.PageObjects
 
 		protected bool WaitForPageToLoad( double timeoutS = 2.0 )
 		{
+			double timeoutDef = Properties.Settings.Default.PageLoadDelay;
+			double t = Math.Max( timeoutS, timeoutDef );
+
 			Thread.Sleep( TimeSpan.FromSeconds( timeoutS ) );
 
+			// the code below does not seem to work correctly
 			//WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutS));
 			//wait.Until( ( wdriver ) =>
 			//	( wdriver as IJavaScriptExecutor ).ExecuteScript( "return document.readyState" ).Equals( "complete" )
 			//);
-
-			// TODO: need a try-catch block here?
 
 			return true;
 		}

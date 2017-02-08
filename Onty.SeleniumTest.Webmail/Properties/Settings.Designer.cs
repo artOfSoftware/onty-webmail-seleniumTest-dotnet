@@ -43,10 +43,19 @@ namespace Onty.SeleniumTest.Webmail.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ie")]
+        [global::System.Configuration.DefaultSettingValueAttribute("phantomjs")]
         public string WebDriverType {
             get {
                 return ((string)(this["WebDriverType"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public double PageLoadDelay {
+            get {
+                return ((double)(this["PageLoadDelay"]));
             }
         }
     }

@@ -25,7 +25,7 @@ namespace Onty.SeleniumTest.Webmail.Tests
 			var homePage = loginPage.LoginAsValid( user );
 
 			// check the menu
-			Assert.IsTrue( loginPage.CheckMenu(user), "validation of menu failed" );
+			Assert.IsTrue( loginPage.CheckMenuLoggedin(user), "validation of menu failed" );
 		}
 
 

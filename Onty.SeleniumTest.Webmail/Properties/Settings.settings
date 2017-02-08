@@ -9,7 +9,10 @@
       <Value Profile="(Default)">C:\Program Files\Mozilla Firefox\firefox.exe</Value>
     </Setting>
     <Setting Name="WebDriverType" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ie</Value>
+      <Value Profile="(Default)">phantomjs</Value>
+    </Setting>
+    <Setting Name="PageLoadDelay" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>
