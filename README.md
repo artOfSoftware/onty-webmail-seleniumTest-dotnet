@@ -15,6 +15,8 @@ They currently support FireFox, IE, Chrome, and PhantomJS.
    _(7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)_
 1. Microsoft Visual Studio 2015 or higher 
    _(Community version is sufficient)_
+1. Microsoft .NET 4.6.2 Runtime 
+   ([download here](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html))
 1. A supported web browser.  Suite currently supports:
    1. Mozilla FireFox _([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
       is strongly suggested because higher versions of FireFox cause a crash 
