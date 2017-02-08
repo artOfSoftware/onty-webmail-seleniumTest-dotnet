@@ -1,31 +1,40 @@
 # Onty.SeleniumTest.Webmail
 
-Automated Selenium test suite for the [Simple Webmail System](https://github.com/ontytoom/onty-webmail-ruby)
+Automated Selenium test suite for the 
+[Simple Webmail System](https://github.com/ontytoom/onty-webmail-ruby)
 
-These tests were written in C# using Selenuium 3 API. They currently use the Firefox WebDriver, but this is configurable.
+These tests were written in C# using Selenuium 3 API. 
+They currently support Firefox and MSIE.
 
 
 ## Running the suite
 
 ### Pre-requisites
 
-1. MS Windows machine (7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)
-1. Visual Studio 2015 or higher (Community version is sufficient)
-1. A web browser.  Suite currently supports:
-   1. Mozilla FireFox ([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
+1. Microsoft Windows machine 
+   _(7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)_
+1. Microsoft Visual Studio 2015 or higher 
+   _(Community version is sufficient)_
+1. A supported web browser.  Suite currently supports:
+   1. Mozilla FireFox _([version 48](https://ftp.mozilla.org/pub/firefox/releases/48.0.2/)
       is strongly suggested because higher versions of FireFox cause a crash 
-      at the end of each test)
-   1. Microsoft Internet Explorer (I use version 11 on 64-bit Windows 7 machine; if you use anything
+      at the end of each test.)_
+   1. Microsoft Internet Explorer _(I use version 11 on 64-bit Windows 7 machine; if you use anything
       else your mileage may vary. Also please make sure you follow the required setup instructions 
-      in Setup section below.)
+      in Setup section below.)_
+      _([Read here](http://jimevansmusic.blogspot.com/2014/09/screenshots-sendkeys-and-sixty-four.html)
+      for a detailed discussion on why you should use 32-bit IE WebDriver instead of 64-bit.)_
 
 ### Setup
 
 1. Download the entire suite, and open in Visual Studio
-1. In ``Solution Explorer`` tool window, right-click the project ("Onty.SeleniumTest.Webmail" 
-   root entry) and click ``Restore NuGet Packages``. This will download all required
-   components and place them in appropriate locations to enable the test to run.
+1. In ``Solution Explorer`` tool window, right-click the project 
+   ("Onty.SeleniumTest.Webmail" root entry) and click ``Restore NuGet Packages``. 
+   This will download all required components and place them in 
+   appropriate locations to enable the test to run.
 1. Browser configuration:
+   1. All browsers: edit the ``app.config`` file, and change ``WebDriverType`` to:
+      ``firefox`` to run tests using Firefox, or ``ie`` for Internet Explorer.
    1. FireFox: Edit the ``app.config`` file and change the ``PathFirefox`` 
       entry to the actual path where FireFox is on your machine.
    1. MSIE: Please please please make sure you follow

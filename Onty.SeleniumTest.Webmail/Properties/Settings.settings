@@ -8,5 +8,8 @@
     <Setting Name="PathFirefox" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\Program Files\Mozilla Firefox\firefox.exe</Value>
     </Setting>
+    <Setting Name="WebDriverType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ie</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
