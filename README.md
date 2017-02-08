@@ -11,8 +11,8 @@ They currently support FireFox, IE, Chrome, and PhantomJS.
 
 ### Pre-requisites
 
-1. **Microsoft Windows machine**
-   _(7 or higher; I run on 64-bit; not tested on 32-bit so may have issues)_
+1. **Microsoft Windows** 7 or higher
+   _(I run on 64-bit; suite has not been tested on 32-bit so may have issues)_
 1. **Microsoft Visual Studio 2015** or higher
    _([Community version](https://www.visualstudio.com/vs/community/)
    is sufficient)_
