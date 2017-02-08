@@ -101,6 +101,9 @@ They currently support FireFox, IE, Chrome, and PhantomJS.
 
 1. Get suite to run on other browsers
    1. Safari
+1. Get suite to run with cloud testing solutions
+   1. BrowserStack
+   1. SauceLabs
 1. Currently every time a new page is retrieved, 
    the function CommonPageElements.WaitForPageToLoad() is called.
    The latter is currently implemented as a simple Thread.Sleep()
