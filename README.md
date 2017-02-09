@@ -16,7 +16,7 @@ They currently support FireFox, IE, Chrome, and PhantomJS.
 1. **Microsoft Visual Studio 2015** or higher
    _([Community version](https://www.visualstudio.com/vs/community/)
    is sufficient)_
-1. **Microsoft .NET 4.6 Developer Pack**
+1. **Microsoft .NET 4.62 Developer Pack**
    _([download here](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html);
    you will need to restart the machine afterwards)_
 1. A supported web browser. Suite currently supports:
