@@ -50,6 +50,7 @@ They currently support FireFox, IE, Chrome, and PhantomJS.
 
 ### Actually running
 
+1. Build the solution.
 1. Open ``Test Expolrer`` tool window in Visual Studio, and click ``Run All``
 
 #### Notes:
